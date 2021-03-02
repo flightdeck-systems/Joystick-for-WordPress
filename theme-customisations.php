@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       Incenta Mods
+ * Plugin Name:       SSSP Mods
  * Description:       A handy little plugin to contain your theme/plugin customisations snippets and modifications.
- * Plugin URI:        http://github.com/RainyDayMedia/incenta-wp-mods
+ * Plugin URI:        http://github.com/edheltzel/sssp-wp-mods
  * Version:           1.0.0
  * Author:            RainyDayMedia
  * Author URI:        https://rainyday.media/
