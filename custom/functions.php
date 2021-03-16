@@ -2,7 +2,7 @@
 /**
  * Functions.php
  *
- * @package  Theme_Customisations
+ * @package  Theme_Customizations
  * @author   RainyDayMedia
  * @since    1.0.0
  */
