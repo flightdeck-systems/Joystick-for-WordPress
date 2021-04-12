@@ -20,12 +20,33 @@ This plugin keeps all of your project changes in one location, independent of th
 
 ### Usage
 
-* Add any CSS snippets to `custom/style.css`. This file is found in this plugin.
+* Add any CSS snippets to `custom/style.css`. This file is found in this plugin - only affects frontend.
 * Add any PHP snippets to `custom/functions.php`. This file is found in this plugin.
-* Add any jQuery snippets to `custom/custom.js`. This file is found in this plugin.
+* Add any jQuery snippets to `custom/custom.js`. This file is found in this plugin - only affects frontend.
 * Add custom top level template files (page.php, single.php, etc) to `custom/templates/`. _You will need to create the templates folder_.
 * Add any WooCommerce template files to `custom/templates/woocommerce`. You will need to create the templates and woocommerce folders.
 * Activate the plugin.
+
+If you would like to add CSS/JS to the dashboard you can either add the below in two locations, `theme-customisations.php` or `functions.php`, ideally it should be added to the `functions.php`
+
+```php
+// Admin CSS
+function launchpad_admin_mods() {
+  wp_enqueue_style('admin-styles', plugin_dir_url( __FILE__ ) . '../admin.css'); // enqueue CSS
+  wp_enqueue_script( 'admin-styles', plugin_dir_url( __FILE__ ) . '../admin-custom.js' ); // enqueue JS
+}
+add_action('admin_enqueue_scripts', 'launchpad_admin_mods');
+```
+
+Customize the login screen only
+
+```php
+// Login CSS
+function launchpad_login_style(){
+    wp_enqueue_style( 'login_style', plugin_dir_url( __FILE__ ) . '../login.css' ); // enqueue CSS
+}
+add_action('login_enqueue_scripts','launchpad_login_style')
+```
 
 ### Frequently Asked Questions
 
@@ -39,4 +60,4 @@ As you know, to override a parent themes template file via child theme you can j
 
 > Should I put all my customisations in this single plugin?
 
-That's entirely up to you. There's nothing to stop you from duplicating this plugin and changing the name. That way you could theoretically keep each of your customisations in their own individual plugins. This can be very handy when debugging, or if you want to quickly enable/disable a specific customisations temporarily. _This is what RDM does_.
+That's entirely up to you. There's nothing to stop you from duplicating this plugin and changing the name. That way you could theoretically keep each of your customisations in their own individual plugins. This can be very handy when debugging, or if you want to quickly enable/disable a specific customisations temporarily. _This is what we do here at Rainy Day Media_.
