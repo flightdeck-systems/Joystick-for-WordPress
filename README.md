@@ -1,4 +1,4 @@
-# Theme Customisations and Admin Mods
+# Launchpad Theme Customisations and Admin Mods
 
 A handy little plugin to contain your theme/plugin customisations snippets and modifications.
 
@@ -6,7 +6,7 @@ Think of this plugin as an alternative to adding code snippets to the `functions
 
 ### Why? 
 
-This plugin keeps all of your project changes in one location, independent of the other components that make up your web site. That means you can **safely perform theme / plugin updates** without the worry of losing your modifications as well as easily deactivating your customisations to check for conflicts.
+This plugin keeps all of your project changes in one location, independent of the other components that make up your Wordpress website. That means you can **safely perform theme and/or plugin updates** without the fear of losing your modifications as well as easily deactivating your customisations to check for conflicts.
 
 *Note:* 
 > This plugin doesn't actually do anything on its own. It is purely a convenient place for you to store your own theme/plugin customisations.
