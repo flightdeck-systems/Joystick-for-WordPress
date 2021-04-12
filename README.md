@@ -13,7 +13,8 @@ This plugin keeps all of your project changes in one location, independent of th
 
 ### Installation
 
-1. Upload `launchpad-wp-mods` to the `/wp-content/plugins/` directory
+1. Upload `launchpad-wp-mods` to the `/wp-content/plugins/` directory 
+  1. **OR** zip the `launchpad-wp-mods` directory and upload using the WordPress uploader
 2. Add your customisations to the plugin either locally or via `Plugins > Editor` in the Dashboard
 3. Activate the plugin through the `Plugins` menu in WordPress
 4. Done!
