@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:        ▶︎ Launchpad Mods
+ * Plugin Name:        ▶︎ Flightdeck Yoke
  * Description:       A handy little plugin to contain your theme/plugin customisations snippets and modifications.
- * Plugin URI:        http://github.com/edheltzel/sssp-wp-mods
+ * Plugin URI:        http://github.com/flight-deck/flightdeck-yoke
  * Version:           1.0.0
- * Author:            RainyDayMedia
- * Author URI:        https://rainyday.media/
+ * Author:            Flightdeck Crew
+ * Author URI:        https://flightdeck.systems/
  * Requires at least: 3.0.0
  * Tested up to:      4.4.2
  *
@@ -50,7 +50,7 @@ final class Theme_Customisations {
 	 * @return void
 	 */
 	public function theme_customisations_css() {
-		wp_enqueue_style( 'custom-css', plugins_url( '/custom/style.css', __FILE__ ) );
+		wp_enqueue_style( 'custom-css', plugins_url( '/custom/styles.css', __FILE__ ) );
 	}
 
 	/**
@@ -59,7 +59,7 @@ final class Theme_Customisations {
 	 * @return void
 	 */
 	public function theme_customisations_js() {
-		wp_enqueue_script( 'custom-js', plugins_url( '/custom/custom.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script( 'custom-js', plugins_url( '/custom/scripts.js', __FILE__ ), array( 'jquery' ) );
 	}
 
 	/**

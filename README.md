@@ -1,6 +1,6 @@
-# Launchpad Theme Customisations and Admin Mods
+# Flightdeck Yoke for WordPress
 
-A handy little plugin to contain your theme/plugin customisations snippets and modifications.
+A handy little plugin to contain all your theme/plugin customisations, snippets, and modifications.
 
 Think of this plugin as an alternative to adding code snippets to the `functions.php`, or `style.css` file in your child theme. 
 
@@ -13,8 +13,8 @@ This plugin keeps all of your project changes in one location, independent of th
 
 ### Installation
 
-1. Upload `launchpad-wp-mods` to the `/wp-content/plugins/` directory 
-  1. **OR** zip the `launchpad-wp-mods` directory and upload using the WordPress uploader
+1. Upload `flightdeck-yoke` to the `/wp-content/plugins/` directory 
+  1. **OR** zip the `flightdeck-yoke` directory and upload using the WordPress uploader
 2. Add your customisations to the plugin either locally or via `Plugins > Editor` in the Dashboard
 3. Activate the plugin through the `Plugins` menu in WordPress
 4. Done!
@@ -32,21 +32,21 @@ If you would like to add CSS/JS to the dashboard you can either add the below in
 
 ```php
 // Admin CSS
-function launchpad_admin_mods() {
+function fd_yoke_admin_mods() {
   wp_enqueue_style('admin-styles', plugin_dir_url( __FILE__ ) . '../admin.css'); // enqueue CSS
-  wp_enqueue_script( 'admin-styles', plugin_dir_url( __FILE__ ) . '../admin-custom.js' ); // enqueue JS
+  wp_enqueue_script( 'admin-styles', plugin_dir_url( __FILE__ ) . '../admin.js' ); // enqueue JS
 }
-add_action('admin_enqueue_scripts', 'launchpad_admin_mods');
+add_action('admin_enqueue_scripts', 'fd_yoke_admin_mods');
 ```
 
 Customize the login screen only
 
 ```php
 // Login CSS
-function launchpad_login_style(){
+function fd_yoke_login_style(){
     wp_enqueue_style( 'login_style', plugin_dir_url( __FILE__ ) . '../login.css' ); // enqueue CSS
 }
-add_action('login_enqueue_scripts','launchpad_login_style')
+add_action('login_enqueue_scripts','fd_yoke_login_style')
 ```
 
 ### Frequently Asked Questions
