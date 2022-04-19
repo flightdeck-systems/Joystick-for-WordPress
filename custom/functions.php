@@ -12,11 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //Admin CSS and JS
-function flightdeck_yoke(){
+function flightdeck_joystick(){
   wp_enqueue_style('admin-styles', plugin_dir_url(__FILE__) . 'admin.css');
   wp_enqueue_script('admin-styles', plugin_dir_url(__FILE__) . 'admin.js');
 }
-add_action('admin_enqueue_scripts', 'flightdeck_yoke');
+add_action('admin_enqueue_scripts', 'flightdeck_joystick');
 
 /**
  * functions.php
